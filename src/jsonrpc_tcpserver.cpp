@@ -238,6 +238,7 @@ namespace Json
       m_clients.erase(m_clients.begin(), m_clients.end());
       
       /* listen socket should be closed in Server destructor */
+      Server::Close();
     }
 
     const std::list<int> TcpServer::GetClients() const
